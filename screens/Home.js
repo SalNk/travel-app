@@ -1,13 +1,13 @@
 import { Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {MagnifyingGlassIcon} from 'react-native-heroicons/outline'
-import { theme } from './theme';
+import { theme } from '../theme';
 
 export default function Home(){
     return (
         <View className="flex-1 relative">
             <StatusBar style="light" />
-            <Image source={require('./assets/images/bg.png')} 
+            <Image source={require('../assets/images/bg.png')} 
                 blurRadius={70}
                 className="absolute w-full h-full"
             />
@@ -30,7 +30,7 @@ export default function Home(){
 
                 {/* Weather icon */}
                 <View className="flex-row justify-center mt-8">
-                    <Image source={require('./assets/images/partlycloudy.png')}
+                    <Image source={require('../assets/images/partlycloudy.png')}
                         className="w-52 h-52"
                     />
                 </View>
@@ -48,15 +48,15 @@ export default function Home(){
                 {/* Other statistiques */}
                 <View className="flex-row justify-between mx-4 mt-16">
                     <View className="flex-row space-x-2">
-                        <Image source={require('./assets/icons/wind.png')} className="w-6 h-6" />
+                        <Image source={require('../assets/icons/wind.png')} className="w-6 h-6" />
                         <Text className="text-white font-semibold text-base">1.2 Km</Text>
                     </View>
                     <View className="flex-row space-x-2">
-                        <Image source={require('./assets/icons/drop.png')} className="w-6 h-6" />
+                        <Image source={require('../assets/icons/drop.png')} className="w-6 h-6" />
                         <Text className="text-white font-semibold text-base">93%</Text>
                     </View>
                     <View className="flex-row space-x-2">
-                        <Image source={require('./assets/icons/sun.png')} className="w-6 h-6" />
+                        <Image source={require('../assets/icons/sun.png')} className="w-6 h-6" />
                         <Text className="text-white font-semibold text-base">08:00 AM</Text>
                     </View>
                 </View>
