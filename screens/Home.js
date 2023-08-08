@@ -1,9 +1,9 @@
-import { Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
+import { Text, View, SafeAreaView, Image, TouchableOpacity, Pressable } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {MagnifyingGlassIcon} from 'react-native-heroicons/outline'
 import { theme } from '../theme';
 
-export default function Home(){
+export default function Home({ navigation }){
     return (
         <View className="flex-1 relative">
             <StatusBar style="light" />
@@ -14,9 +14,9 @@ export default function Home(){
             <SafeAreaView className="mx-4">
                 {/* Search button */}
                 <View className="flex-row justify-end">
-                    <TouchableOpacity className=" p-3 m-1 rounded-full" style={{backgroundColor : theme.bgWhite(0.2)}}>
+                    <Pressable onPress={() => navigation.navigate('Search')} className=" p-3 m-1 rounded-full" style={{backgroundColor : theme.bgWhite(0.2)}}>
                         <MagnifyingGlassIcon size="25" color="white" />
-                    </TouchableOpacity>
+                    </Pressable>
                 </View>
 
 
