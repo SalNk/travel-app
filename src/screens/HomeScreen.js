@@ -6,6 +6,8 @@ import { StatusBar } from 'expo-status-bar';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import Categories from '../components/Categories';
+import SortCategories from '../components/SortCategories';
+import Destinations from '../components/Destinations';
 
 const ios = Platform.OS == 'ios'
 const topMargin = ios ? 'mt-3' : 'mt-10'
@@ -37,6 +39,16 @@ export default function HomeScreen() {
                 {/* categories */}
                 <View className="mb-4">
                    <Categories/> 
+                </View>
+
+                {/* sortcategories */}
+                <View className="mb-4">
+                   <SortCategories/> 
+                </View>
+
+                {/* Destinations */}
+                <View className="mb-4">
+                   <Destinations/> 
                 </View>
             </ScrollView>
         </SafeAreaView>
